@@ -1,0 +1,29 @@
+// WAP to take number from a user in a array and print the sum of the array
+// 
+import java.io.*;
+class P2{
+	public static void main(String[] args)throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter row and column : ");
+		int row = Integer.parseInt(br.readLine());
+		int col = Integer.parseInt(br.readLine());
+
+		int arr[][] = new int[row][col];
+		System.out.println("Enter array elements : ");
+		for (int i=0; i<row; i++){
+			for (int j=0; j<col; j++){
+				arr[i][j] = Integer.parseInt(br.readLine());
+			}
+		}
+		int sum = 0;
+		for (int i=0; i<row; i++){
+			for (int j=0; j<col; j++){
+				sum = sum+arr[i][j];
+			}
+		}
+		System.out.println("sum of array element is "+ sum);
+
+	}
+}
+
+

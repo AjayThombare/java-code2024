@@ -1,0 +1,31 @@
+// WAP to take numbers from a user in 2D array and print the product of the primary diagonal of an array
+//
+
+import java.io.*;
+class P7{
+        public static void main(String [] args)throws IOException{
+                BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+                System.out.println("Enter row and column : ");
+                int row = Integer.parseInt(br.readLine());
+                int col = Integer.parseInt(br.readLine());
+
+                int arr[][] = new int[row][col];
+
+                System.out.println("Enter array elements :");
+                for (int i=0; i<row; i++){
+                        for (int j=0; j<col; j++){
+                                arr[i][j] = Integer.parseInt(br.readLine());
+                        }
+                }
+		int pro = 1;
+                for (int i=0; i<row; i++){
+                        for (int j=0; j<col; j++){
+                        	if (i==j){
+					pro = pro*arr[i][j];
+				}
+                        }
+                        System.out.println();
+                }
+		System.out.println("Product of priamary diagonal " + pro);
+        }
+}
